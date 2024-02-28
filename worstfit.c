@@ -5,6 +5,7 @@ struct process {
     int allocated;
 };
 
+
 void main() {
     int nb, np, best;
     printf("Enter the number of memory locations: ");
