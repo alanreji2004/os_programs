@@ -1,7 +1,8 @@
 #include<stdio.h>
-
+ 
 struct process {
-    int size;
+  
+int size;
     int allocated;
 };
 
