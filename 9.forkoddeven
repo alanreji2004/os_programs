@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+
+void main() {
+    pid_t p;
+    int a;
+    printf("Enter the range: ");
+    scanf("%d", &a);
+    p = fork();
+    for (int i = 0; i <= a; i++) {
+        if (p == 0) {
+            if (i % 2 == 0) {
+                printf("%d\n", i);
+            }
+        } else if (p > 0) {
+            if (i % 2 != 0) {
+                printf("%d\n", i);
+            }
+        }
+    }
+}
